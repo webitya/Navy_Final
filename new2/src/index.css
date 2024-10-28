@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional smooth transition for more fluid animation */
+.slide-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.slide-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.loader {
+    border-top-color: transparent;
+    /* Makes the top border transparent */
+}
