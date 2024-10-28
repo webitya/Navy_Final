@@ -18,8 +18,6 @@ export const Login = () => {
             return;
         }
 
-        console.log('Email:', email);
-        console.log('Password:', password);
         const response = await useLogin({ email, password }, setUser);
         if (response) {
 

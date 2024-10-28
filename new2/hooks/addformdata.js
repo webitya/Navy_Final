@@ -5,7 +5,7 @@ import axios from "axios";
 export const useSubmitFormData = async (data, setLoading) => {
     try {
         setLoading(true)
-        const response = await axios.post('/api/setformdata', data, {
+        const response = await axios.post(`${import.meta.env.VITE_URI}/api/setformdata`, data, {
             withCredentials: true
         });
         toast.success('form submitted successfully')

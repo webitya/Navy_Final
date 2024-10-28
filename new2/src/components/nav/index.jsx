@@ -15,7 +15,6 @@ export const Navbar = () => {
     // console.log(location.pathname);
 
     useEffect(() => {
-        console.log(isAdminPage)
         if (location.pathname.includes('admin')) {
             setIsAdminPage(true);
         } else {

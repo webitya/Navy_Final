@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 export const useLogout = async (setUser) => {
     try {
-        const response = await axios.post('/api/auth/logout', {}, {
+        const response = await axios.post(`${import.meta.env.VITE_URI}/api/auth/logout`, {}, {
             withCredentials: true
         });
         setUser(null)
