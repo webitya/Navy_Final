@@ -32,7 +32,7 @@ export const AdminPanel = () => {
     useEffect(() => {
         const fetchForms = async () => {
             try {
-                const response = await axios.get('/api/getformdata', { withCredentials: true });
+                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getformdata`, { withCredentials: true });
                 setForms(response.data.data);
             } catch (err) {
                 setError('Failed to fetch forms. Please try again later.');
@@ -40,7 +40,7 @@ export const AdminPanel = () => {
         };
         const fetchStats = async () => {
             try {
-                const response = await axios.get(`/api/getquerydata?type=${filter}`, { withCredentials: true });
+                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getquerydata?type=${filter}`, { withCredentials: true });
                 setStats(response.data.data);
             } catch (err) {
                 setError('Failed to fetch statistics. Please try again later.');
@@ -55,11 +55,11 @@ export const AdminPanel = () => {
 
 
     const data = {
-        labels: stats.map((stat) => stat._id),
+        labels: stats?.map((stat) => stat._id),
         datasets: [
             {
                 label: `Forms submitted (${filter})`,
-                data: stats.map((stat) => stat.count),
+                data: stats?.map((stat) => stat.count),
                 backgroundColor: 'rgba(75, 192, 192, 0.5)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
@@ -96,7 +96,10 @@ export const AdminPanel = () => {
                 <Bar data={data} options={options} />
             </div>
 
-            <FormTable forms={forms} onViewDetails={setSelectedUser} setForms={setForms} />
+            {
+                forms && <FormTable forms={forms} onViewDetails={setSelectedUser} setForms={setForms} />
+            }
+
             {selectedUser && (
                 <UserDetailPopup user={selectedUser} onClose={() => setSelectedUser(null)} />
             )}

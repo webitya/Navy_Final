@@ -2,6 +2,7 @@ import { Banner } from "../model/banner.js";
 
 export const getBanner = async (req, res) => {
     try {
+
         const banners = await Banner.find();
         if (!banners) {
             return res.status(404)

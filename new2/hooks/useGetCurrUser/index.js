@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const useGetCurrUser = async (setUser) => {
     try {
-        const response = await axios.get('/api/auth/getCurrUser', {
+        const response = await axios.get(`${import.meta.env.VITE_URI}/api/auth/getCurrUser`, {
             withCredentials: true
         });
         setUser(response.data.data)

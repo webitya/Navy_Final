@@ -7,7 +7,7 @@ export const FormTable = ({ forms, onViewDetails, setForms }) => {
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
-    const totalPages = Math.ceil(forms.length / itemsPerPage);
+    const totalPages = Math.ceil(forms?.length / itemsPerPage);
     const paginatedForms = forms.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
@@ -16,7 +16,6 @@ export const FormTable = ({ forms, onViewDetails, setForms }) => {
     const handlePageChange = (page) => setCurrentPage(page);
 
     const handleUpdateClick = async (formId, action) => {
-        console.log(`Form ID: ${formId}, Action: ${action}`);
         const response = await useUpdateState(formId, action, setLoading);
         if (response) {
             if (action == 'rejected') {
@@ -32,7 +31,6 @@ export const FormTable = ({ forms, onViewDetails, setForms }) => {
 
         }
     };
-    console.log(forms);
 
     if (loading) {
         return (

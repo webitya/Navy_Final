@@ -5,20 +5,16 @@ import { useUploadImage } from "../useUploadImage";
 
 export const useUpdateBanner = async (file, id) => {
     try {
-        console.log(id);
-
-        console.log("Starting Banner Update...");
 
         const imageUri = await useUploadImage(file);
 
-        console.log("Uploaded Image URI:", imageUri);
 
         if (!imageUri) {
             throw new Error("Failed to upload image. Please try again.");
         }
 
         const response = await axios.post(
-            "/api/data/updateBanner",
+            `${import.meta.env.VITE_URI}/api/data/updateBanner`,
             {
                 imageUri,
                 id,
