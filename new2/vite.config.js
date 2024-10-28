@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://navy-final.onrender.com',
+        target: "https://navy-final.onrender.com",
         changeOrigin: true,
       },
     },
