@@ -50,4 +50,4 @@ export const defaultFormValues = {
     twelveCertificates: '',
     itiCertificates: '',
     photo: '',
-};
+};                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
