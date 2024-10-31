@@ -1,0 +1,90 @@
+.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: url('/ocean-bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 18, 50, 0.9); /* Dark navy blue overlay */
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('/wave-overlay.png') repeat-x; /* Subtle wave overlay */
+  opacity: 0.3;
+  animation: wave 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes wave {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.cta-content {
+  max-width: 800px;
+  padding: 40px;
+  background-color: rgba(0, 18, 50, 0.85); /* Darker navy blue for content */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffcc00; /* Bright maritime yellow for contrast */
+}
+
+.cta-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #cfd8dc; /* Light grey-blue for readability */
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  background-color: #ffcc00; /* Bright yellow button for contrast */
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #002244; /* Deep navy text color */
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #ffd54f;
+  color: #001a33; /* Darker navy */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 204, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-description {
+    font-size: 0.9rem;
+  }
+}

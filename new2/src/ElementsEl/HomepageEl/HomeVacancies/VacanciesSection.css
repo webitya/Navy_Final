@@ -1,0 +1,76 @@
+.training-vacancies-section {
+    padding: 40px 20px;
+    background-color: #f0f4f8;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #003366;
+    font-weight: bold;
+  }
+  
+  .training-card,
+  .vacancy-card {
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  .card-image {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .training-card:hover,
+  .vacancy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .more-info-button {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #003366;
+    border: none;
+  }
+  
+  .more-info-button:hover {
+    background-color: #002244;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .card-image {
+      height: 180px;
+    }
+  
+    .training-card,
+    .vacancy-card {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .more-info-button {
+      font-size: 0.875rem;
+      padding: 10px 20px;
+    }
+  }
+  

@@ -1,0 +1,8 @@
+.footerButton{
+    padding: 5px 25px;
+   outline: none !important;
+   background-color: #003366d8 !important;
+   box-shadow: none !important; /* This should disable the box shadow */
+   color: white !important;
+   border: none !important; /* Ensure border doesn't add a shadow */
+}

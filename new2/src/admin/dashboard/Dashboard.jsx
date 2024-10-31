@@ -8,10 +8,13 @@ import { FormTable } from '../../components/formTable';
 import { UserDetailPopup } from '../../components/userDetailsPopup';
 import ImageSlider from '../../components/adminSlider';
 import { useGetBanner } from '../../../hooks/useGetBanner';
+import NavbarEl2 from '../../Shared/NavbarEl2';
+import FooterEl from '../../Shared/FooterEl';
 
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export const AdminPanel = () => {
+   
     const navigate = useNavigate();
     const { user } = useAppContext();
     const [forms, setForms] = useState([]);
@@ -78,6 +81,8 @@ export const AdminPanel = () => {
 
 
     return (
+        <>
+         <NavbarEl2/>
         <div className="p-5 max-w-3xl mx-auto">
             <h1 className="text-center text-2xl font-bold mb-4">Admin Panel</h1>
             <div className="text-center mb-4">
@@ -105,8 +110,13 @@ export const AdminPanel = () => {
             )}
 
             <ImageSlider banner={banner} setBanner={setBanner} />
+            
         </div>
+        <FooterEl/>
+        </>
+       
     );
+    
 };
 
 export default AdminPanel;
