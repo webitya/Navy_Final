@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = ['http://localhost:5173', 'https://merchant-bay.vercel.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://merchant-bay.vercel.app','https://www.indianmarksline.in'];
 
 app.use(
     cors({
