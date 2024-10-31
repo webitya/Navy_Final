@@ -76,7 +76,7 @@ export const ApplicationForm = () => {
                 <h2 className="text-2xl font-bold text-center mb-4">INDIAN MARKSLINE</h2>
 
                 {/* Credentials Section */}
-                <div className="mb-4">
+                <div className="mb-5">
                     <h3 className="font-semibold mb-2">Credentials <span className="text-red-500">{isFieldRequired('category') && '*'}</span></h3>
                     <label className="block mb-1">Choose Category</label>
                     <select {...register('category')} className="border rounded-lg p-2 w-full mb-2">
@@ -90,13 +90,13 @@ export const ApplicationForm = () => {
                 </div>
 
                 {/* Personal Details */}
-                <div className="mb-4">
+                <div className="mb-5">
                     <label className="block mb-1">Name as per your certificate <span className="text-red-500">{isFieldRequired('name') && '*'}</span></label>
                     <input type="text" {...register('name')} className="border rounded-lg p-2 w-full" />
                     <span className="text-red-500">{errors.name?.message}</span>
                 </div>
                 {/* for profile pic  */}
-                <div>
+                <div className='py-4'>
                     <label className="block mb-1">Upload Profile Pic</label>
 
                     <input
@@ -113,7 +113,7 @@ export const ApplicationForm = () => {
 
 
                 {['caste', 'fatherName', 'fatherOccupation'].map((field) => (
-                    <div className="mb-4" key={field}>
+                    <div className="mb-5" key={field}>
                         <label className="block mb-1">
                             {field.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())}
                             <span className="text-red-500">{isFieldRequired(field) && '*'}</span>
@@ -150,7 +150,7 @@ export const ApplicationForm = () => {
                 <div className="mb-4">
                     <h3 className="font-semibold mb-2">Present Address <span className="text-red-500">{isFieldRequired('presentAddress') && '*'}</span></h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {['vill', 'post', 'ps', 'pincode', 'mob1', 'emailId'].map((addressField, index) => (
+                        {['Village', 'Post Office', 'Police Station', 'Pincode', 'Mobile Number', 'Email'].map((addressField, index) => (
                             <div key={index}>
                                 <label className="block mb-1">{addressField.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} <span className="text-red-500">{isFieldRequired(`presentAddress.${addressField}`) && '*'}</span></label>
                                 <input {...register(`presentAddress.${addressField}`)} className="border rounded-lg p-2 w-full" />
@@ -167,7 +167,7 @@ export const ApplicationForm = () => {
                         Same as Present
                     </button>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {['vill', 'post', 'ps', 'pincode', 'mob1', 'emailId'].map((addressField, index) => (
+                        {['Village', 'Post Office', 'Police Station', 'Pincode', 'Mobile Number', 'Email'].map((addressField, index) => (
                             <div key={index}>
                                 <label className="block mb-1">{addressField.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} <span className="text-red-500">{isFieldRequired(`permanentAddress.${addressField}`) && '*'}</span></label>
                                 <input {...register(`permanentAddress.${addressField}`)} className="border rounded-lg p-2 w-full" />
@@ -180,11 +180,11 @@ export const ApplicationForm = () => {
                 {/* Educational Particulars */}
                 <div className="mb-4">
                     <h3 className="font-semibold mb-2">Educational Particulars <span className="text-red-500">{isFieldRequired('educationalParticulars') && '*'}</span></h3>
-                    {['ten', 'twelve', 'iti'].map((grade, index) => (
+                    {['Tenth', 'Twelve', 'ITI'].map((grade, index) => (
                         <div key={index} className="mb-4">
-                            <h4 className="font-semibold">{`${grade === 'ten' ? '10th' : grade === 'twelve' ? '12th' : 'ITI'} Grade`}</h4>
+                            <h4 className="font-semibold">{`${grade === 'Tenth' ? '10th' : grade === 'Twelve' ? '12th' : 'ITI'} Grade`}</h4>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                {['university', 'yearOfPassing', 'percentage'].map((field) => (
+                                {['School/College/University', 'yearOfPassing', 'percentage'].map((field) => (
                                     <div key={field}>
                                         <label className="block mb-1">{field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} <span className="text-red-500">{isFieldRequired(`educationalParticulars.${grade}.${field}`) && '*'}</span></label>
                                         <input
@@ -260,7 +260,7 @@ export const ApplicationForm = () => {
 
                 <div>
                     <label className="block mb-1">
-                        Upload Certificate
+                        Upload AadharCard
                     </label>
                     <input
                         type="file"
