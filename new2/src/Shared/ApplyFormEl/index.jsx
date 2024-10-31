@@ -71,7 +71,7 @@ export const ApplicationForm = () => {
     return (
        <>
        <NavbarEl2/>
-       <div className="container mx-auto py-10 my-5">
+       <div className="container mx-auto py-5">
             <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-auto p-6 bg-white rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-center mb-4">INDIAN MARKSLINE</h2>
 

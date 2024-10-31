@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../../context';
 import { useLogin } from '../../../hooks/useLogin';
+import LayoutEl from '../../Shared/LayoutEl';
 
 
 export const Login = () => {
@@ -29,7 +30,9 @@ export const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
+       <>
+       <LayoutEl>
+       <div className="flex items-center justify-center h-screen bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
                 <h2 className="text-2xl font-semibold text-center mb-4">Login</h2>
                 {error && <div className="mb-4 text-red-500">{error}</div>}
@@ -68,6 +71,8 @@ export const Login = () => {
                 </form>
             </div>
         </div>
+       </LayoutEl>
+       </>
     );
 };
 
