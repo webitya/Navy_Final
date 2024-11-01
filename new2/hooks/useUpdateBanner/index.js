@@ -12,7 +12,7 @@ export const useUpdateBanner = async (file, id) => {
         if (!imageUri) {
             throw new Error("Failed to upload image. Please try again.");
         }
-
+        const token = localStorage.getItem('token');
         const response = await axios.post(
             `${import.meta.env.VITE_URI}/api/data/updateBanner`,
             {
@@ -20,7 +20,11 @@ export const useUpdateBanner = async (file, id) => {
                 id,
             },
             {
-                withCredentials: true,
+                headers: {
+                    'Authorization': `Bearer ${token}`, // Include token in Authorization header
+                    'Content-Type': 'application/json'   // Optional: specify content type
+                },
+                withCredentials: true
             }
         );
         return response.data.data;

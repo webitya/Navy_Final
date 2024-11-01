@@ -11,44 +11,48 @@ const addressSchema = new mongoose.Schema({
     mob1: {
         type: String,
         required: true,
+        validate: {
+            validator: (value) => /^\d{10}$/.test(value), // Ensure it's a 10-digit mobile number
+            message: "Invalid mobile number"
+        }
     },
     emailId: {
         type: String,
-        required: true,
+        required: false, // Email is optional
+        validate: {
+            validator: (value) => !value || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value), // Optional and valid email format
+            message: "Invalid email address"
+        }
     }
 });
 
 const gradeSchema = new mongoose.Schema({
-    university: { type: String },
-    yearOfPassing: {
-        type: String,
-    },
-    percentage: {
-        type: String,
-    }
+    university: { type: String, required: false }, // Optional as per Zod schema
+    yearOfPassing: { type: String, required: false }, // Optional as per Zod schema
+    percentage: { type: String, required: false }, // Optional as per Zod schema
 });
 
 const educationalParticularsSchema = new mongoose.Schema({
-    ten: { type: gradeSchema },
-    twelve: { type: gradeSchema },
-    iti: { type: gradeSchema }
+    ten: { type: gradeSchema, required: true }, // Required as per Zod schema
+    twelve: { type: gradeSchema, required: false }, // Optional as per Zod schema
+    iti: { type: gradeSchema, required: false }, // Optional as per Zod schema
 });
 
 const formSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        default :"Seaman"
+        default: "Seaman"
     },
     name: { type: String, required: true },
-    caste: { type: String, required: false },
+    caste: { type: String, required: false }, // Optional as per Zod schema
     fatherName: { type: String, required: true },
-    fatherOccupation: { type: String },
+    fatherOccupation: { type: String, required: false }, // Optional as per Zod schema
 
     presentAddress: { type: addressSchema, required: true },
-    permanentAddress: { type: addressSchema, required: false },
+    permanentAddress: { type: addressSchema, required: false }, // Optional as per Zod schema
 
-    educationalParticulars: { type: educationalParticularsSchema },
+    educationalParticulars: { type: educationalParticularsSchema, required: true }, // Required as per Zod schema
 
     nationality: { type: String, required: true },
     maritalStatus: {
@@ -64,7 +68,7 @@ const formSchema = new mongoose.Schema({
             message: "Invalid date format"
         }
     },
-    visibleIdentificationMark: { type: String, required: true },
+    visibleIdentificationMark: { type: String, required: false }, // Optional as per Zod schema
     state: {
         type: String,
         enum: ['pending', 'approved'],
@@ -74,18 +78,10 @@ const formSchema = new mongoose.Schema({
         type: String,
         default: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
     },
-    tenCertificate: {
-        type: String
-    },
-    twelveCertificate: {
-        type: String
-    },
-    itiCertificate: {
-        type: String
-    },
-    additionalCertificates: {
-        type: String,
-    }
+    tenCertificate: { type: String, required: false }, // Optional as per Zod schema
+    twelveCertificate: { type: String, required: false }, // Optional as per Zod schema
+    itiCertificate: { type: String, required: false }, // Optional as per Zod schema
+    additionalCertificates: { type: String, required: false }, // Optional as per Zod schema
 }, { timestamps: true });
 
 export const ApplicationForm = mongoose.model("ApplicationForm", formSchema);

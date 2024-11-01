@@ -28,6 +28,8 @@ export const AppContextProvider = ({ children }) => {
         fetchCurrUser();
     }, []);
 
+
+
     if (loading) return <Loader />;
 
     return (
