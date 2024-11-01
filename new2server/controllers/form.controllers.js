@@ -21,28 +21,25 @@ export const addFormData = async (req, res) => {
 
 export const getFormData = async (req, res) => {
     try {
-        const formData = await ApplicationForm.find();
-        if (!formData) {
-            return res.status(404)
-                .json(
-                    {
-                        message: 'No data found',
-                        data: null
-                    }
-                )
+        const formData = await ApplicationForm.find().sort({ createdAt: -1 });
+
+        if (!formData || formData.length === 0) {
+            return res.status(404).json({
+                message: 'No data found',
+                data: null
+            });
         }
 
         return res.status(200).json({
             message: 'Form data fetched successfully',
             data: formData
-        })
+        });
 
     } catch (error) {
         console.error('Error fetching form data:', error);
         res.status(500).json({ error: 'Failed to fetch form data' });
     }
-}
-
+};
 
 export const getQueryData = async (req, res) => {
     let { type } = req.query;
