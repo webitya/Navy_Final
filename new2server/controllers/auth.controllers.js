@@ -1,7 +1,5 @@
 import jwt from 'jsonwebtoken';
 
-import jwt from 'jsonwebtoken';
-
 export const Login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -36,7 +34,7 @@ export const Login = async (req, res) => {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === 'production',
                 maxAge: 3600000,  // 1 hour
-                sameSite: 'None'   // Fix the typo, should be 'sameSite'
+                sameSite: 'Strict'
             })
             .json({
                 message: 'Login successful',
