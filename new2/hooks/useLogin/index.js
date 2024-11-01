@@ -7,6 +7,9 @@ export const useLogin = async (data, setUser) => {
             withCredentials: true
         });
         setUser(response.data.data)
+        console.log(response.data.data);
+
+        localStorage.setItem('token', response.data.data.token)
         return true
     } catch (error) {
         setUser(null)

@@ -3,12 +3,20 @@ import axios from "axios";
 
 export const useGetCurrUser = async (setUser) => {
     try {
+        const token = localStorage.getItem('token');
+
         const response = await axios.get(`${import.meta.env.VITE_URI}/api/auth/getCurrUser`, {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
             withCredentials: true
         });
-        setUser(response.data.data)
-        return true
+
+        setUser(response.data.data);
+        return true;
     } catch (error) {
-        return false
+        toast.error('Failed to fetch user data');
+        return false;
     }
-} 
+};
