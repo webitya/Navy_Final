@@ -1,7 +1,11 @@
 import jwt from 'jsonwebtoken';
 
+import jwt from 'jsonwebtoken';
+
 export const Login = async (req, res) => {
     const { email, password } = req.body;
+
+    // Check if email and password are provided
     if (!email || !password) {
         return res.status(400).json({
             message: 'Please provide email and password',
@@ -9,31 +13,35 @@ export const Login = async (req, res) => {
     }
 
     try {
-        const name = 'Admin'
+        const name = 'Admin';
         const hardcodedEmail = 'admin@example.com';
         const hardcodedPassword = 'example123';
 
+        // Verify the email and password
         if (email !== hardcodedEmail || password !== hardcodedPassword) {
             return res.status(401).json({
                 message: 'Invalid email or password',
             });
         }
 
+        // Generate JWT token
         const token = jwt.sign({ email, name }, 'your_jwt_secret', {
             expiresIn: '1d',
         });
 
+        // Send the token in a cookie
         return res
             .status(200)
             .cookie('token', token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === 'production',
-                maxAge: 3600000,
+                maxAge: 3600000,  // 1 hour
+                sameSite: 'None'   // Fix the typo, should be 'sameSite'
             })
             .json({
                 message: 'Login successful',
                 data: {
-                    name: 'admin',
+                    name: 'Admin',
                     email: hardcodedEmail,
                 },
             });
@@ -41,9 +49,10 @@ export const Login = async (req, res) => {
     } catch (error) {
         return res.status(500).json({
             message: error.message,
-        })
+        });
     }
 };
+
 
 export const Logout = async (req, res) => {
     res.clearCookie('token');

@@ -96,10 +96,11 @@ export const ApplicationForm = () => {
                         <label className="block mb-1">Choose Category</label>
                         <select {...register('category')} className="border rounded-lg p-2 w-full mb-2">
                             <option value="seaman">Seaman</option>
-                            <option value="filler">Filllet</option>
-                            <option value="deckgabet">Deckgabet</option>
+                            <option value="fitterElectrician">Fitter Electrician</option>
+                            <option value="deckcadet">Deck Cadet</option>
                             <option value="engine_rating">Engine Rating</option>
-                            <option value="cookAsstt">Cook Assistant</option>
+                            <option value="cookAsstt">Cook Assistant  ( 6 Months )</option>
+                            <option value="gpRating">G.P Rating  ( 6 Months )</option>
                         </select>
                         <span className="text-red-500">{errors.category?.message}</span>
                     </div>
@@ -127,38 +128,57 @@ export const ApplicationForm = () => {
                     </div>
 
 
-                    {['caste', 'fatherName', 'fatherOccupation'].map((field) => (
-                        <div className="mb-5" key={field}>
-                            <label className="block mb-1">
-                                {field.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())}
-                                <span className="text-red-500">{isFieldRequired(field) && '*'}</span>
-                            </label>
+                    <div className="mb-5">
+    <label className="block mb-1">
+        Caste
+        <span className="text-red-500">{isFieldRequired('caste') && '*'}</span>
+    </label>
+    <select
+        {...register('caste')}
+        className="border rounded-lg p-2 w-full"
+    >
+        <option value="">Select Caste</option>
+        <option value="general">General</option>
+        <option value="obc">OBC</option>
+        <option value="sc">SC</option>
+        <option value="st">ST</option>
+        <option value="other">Other</option>
+    </select>
+    <span className="text-red-500">
+        {errors['caste']?.message}
+    </span>
+</div>
 
-                            {field === 'caste' ? (
-                                <select
-                                    {...register(field)}
-                                    className="border rounded-lg p-2 w-full"
-                                >
-                                    <option value="">Select Caste</option>
-                                    <option value="general">General</option>
-                                    <option value="obc">OBC</option>
-                                    <option value="sc">SC</option>
-                                    <option value="st">ST</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            ) : (
-                                <input
-                                    {...register(field)}
-                                    className="border rounded-lg p-2 w-full"
-                                    type="text"
-                                />
-                            )}
+<div className="mb-5">
+    <label className="block mb-1">
+        Father's Name
+        <span className="text-red-500">{isFieldRequired('fatherName') && '*'}</span>
+    </label>
+    <input
+        {...register('fatherName')}
+        className="border rounded-lg p-2 w-full"
+        type="text"
+    />
+    <span className="text-red-500">
+        {errors['fatherName']?.message}
+    </span>
+</div>
 
-                            <span className="text-red-500">
-                                {errors[field]?.message}
-                            </span>
-                        </div>
-                    ))}
+<div className="mb-5">
+    <label className="block mb-1">
+        Father's Occupation
+        <span className="text-red-500">{isFieldRequired('fatherOccupation') && '*'}</span>
+    </label>
+    <input
+        {...register('fatherOccupation')}
+        className="border rounded-lg p-2 w-full"
+        type="text"
+    />
+    <span className="text-red-500">
+        {errors['fatherOccupation']?.message}
+    </span>
+</div>
+
 
 
                     {/* Present Address Section */}

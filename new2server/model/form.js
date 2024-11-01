@@ -38,7 +38,7 @@ const formSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ["seaman", "filler", "deckgabet", "engine_rating", "cookAsstt"]
+        default :"Seaman"
     },
     name: { type: String, required: true },
     caste: { type: String, required: false },

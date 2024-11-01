@@ -33,7 +33,7 @@ const educationalParticularsSchema = z.object({
 });
 
 export const formSchema = z.object({
-    category: z.enum(["seaman", "filler", "deckgabet", "engine_rating", "cookAsstt"]),
+    category: z.string(),
     name: z.string().nonempty("Enter Your Name is"),
     caste: z.string().optional(),
     fatherName: z.string().nonempty("Enter Your Father's Name"),
