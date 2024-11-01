@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Row, Col, Image } from 'antd';
+import "./GalleryHeroEl.css";
 
 const images = [
   { src: '/c.jpeg', alt: 'Image 1' },
@@ -32,7 +33,7 @@ const GalleryHeroEl = () => {
           <Col xs={24} sm={12} md={8} lg={6} key={index} className="mb-4">
             <div
               style={{
-                height: '300px', // Set a fixed height for the card
+                height: '300px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -46,10 +47,11 @@ const GalleryHeroEl = () => {
               <Image
                 src={image.src}
                 alt={image.alt}
+                preview={false}
                 style={{
-                  maxHeight: '100%', // Maintain aspect ratio
+                  maxHeight: '100%',
                   maxWidth: '100%',
-                  objectFit: 'cover', // Cover the card area
+                  objectFit: 'cover',
                 }}
               />
             </div>
@@ -64,10 +66,12 @@ const GalleryHeroEl = () => {
         centered
         width="80%"
         style={{ top: 20 }}
+        className="custom-modal"
       >
         <Image
           src={selectedImage}
           alt="Selected Image"
+          preview={false} // Disable preview on hover
           style={{ width: '100%', height: 'auto' }}
         />
       </Modal>

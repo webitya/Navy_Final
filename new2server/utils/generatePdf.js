@@ -2,9 +2,10 @@ import { jsPDF } from 'jspdf';
 import { Buffer } from 'buffer'; // Use buffer from 'buffer' in Node.js
 
 export const generatePDF = async (user) => {
+    console.log(user)
     try {
         const doc = new jsPDF();
-
+        console.log(user)
         // Helper function to safely access nested properties
         const getValue = (value, fallback = 'N/A') =>
             value !== undefined && value !== null ? value.toString() : fallback;

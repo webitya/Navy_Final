@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+
 
 import jwt from 'jsonwebtoken';
 
@@ -19,6 +19,7 @@ export const Login = async (req, res) => {
 
         // Verify the email and password
         if (email !== hardcodedEmail || password !== hardcodedPassword) {
+            console.log(hardcodedEmail,hardcodedPassword)
             return res.status(401).json({
                 message: 'Invalid email or password',
             });

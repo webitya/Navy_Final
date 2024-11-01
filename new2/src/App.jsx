@@ -17,6 +17,7 @@ import Contact from './components/Contact';
 import GPRating from './components/GPRating';
 import CCMC from './components/CCMC';
 import Gallery from './components/Gallery';
+import ApplicationForm2 from './Shared/Applli2';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/gp-rating" element={<GPRating/>} />
           <Route path="/ccmc" element={<CCMC/>} />
           <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/appli" element={<ApplicationForm2/>} />
           <Route
             path="/admin"
             element={
