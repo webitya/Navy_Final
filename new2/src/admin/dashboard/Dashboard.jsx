@@ -14,7 +14,7 @@ import FooterEl from '../../Shared/FooterEl';
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export const AdminPanel = () => {
-   
+
     const navigate = useNavigate();
     const { user } = useAppContext();
     const [forms, setForms] = useState([]);
@@ -33,9 +33,16 @@ export const AdminPanel = () => {
 
 
     useEffect(() => {
+        const token = localStorage.getItem('token');
+
         const fetchForms = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getformdata`, { withCredentials: true });
+                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getformdata`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                }, { withCredentials: true });
                 setForms(response.data.data);
             } catch (err) {
                 setError('Failed to fetch forms. Please try again later.');
@@ -43,7 +50,14 @@ export const AdminPanel = () => {
         };
         const fetchStats = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getquerydata?type=${filter}`, { withCredentials: true });
+                const response = await axios.get(`${import.meta.env.VITE_URI}/api/getquerydata?type=${filter}`,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        }
+                    },
+                    { withCredentials: true });
                 setStats(response.data.data);
             } catch (err) {
                 setError('Failed to fetch statistics. Please try again later.');
@@ -82,41 +96,41 @@ export const AdminPanel = () => {
 
     return (
         <>
-         <NavbarEl2/>
-        <div className="p-5 max-w-3xl mx-auto">
-            <h1 className="text-center text-2xl font-bold mb-4">Admin Panel</h1>
-            <div className="text-center mb-4">
-                <select
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    className="p-2 border rounded"
-                >
-                    <option value="yearly">Yearly</option>
-                </select>
+            <NavbarEl2 />
+            <div className="p-5 max-w-3xl mx-auto">
+                <h1 className="text-center text-2xl font-bold mb-4">Admin Panel</h1>
+                <div className="text-center mb-4">
+                    <select
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                        className="p-2 border rounded"
+                    >
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+
+                {error && <div className="text-red-500 text-center">{error}</div>}
+
+                <div className="mb-8 h-[400px] " >
+                    <Bar data={data} options={options} />
+                </div>
+
+                {
+                    forms && <FormTable forms={forms} onViewDetails={setSelectedUser} setForms={setForms} />
+                }
+
+                {selectedUser && (
+                    <UserDetailPopup user={selectedUser} onClose={() => setSelectedUser(null)} />
+                )}
+
+                <ImageSlider banner={banner} setBanner={setBanner} />
+
             </div>
-
-            {error && <div className="text-red-500 text-center">{error}</div>}
-
-            <div className="mb-8 h-[400px] " >
-                <Bar data={data} options={options} />
-            </div>
-
-            {
-                forms && <FormTable forms={forms} onViewDetails={setSelectedUser} setForms={setForms} />
-            }
-
-            {selectedUser && (
-                <UserDetailPopup user={selectedUser} onClose={() => setSelectedUser(null)} />
-            )}
-
-            <ImageSlider banner={banner} setBanner={setBanner} />
-            
-        </div>
-        <FooterEl/>
+            <FooterEl />
         </>
-       
+
     );
-    
+
 };
 
 export default AdminPanel;

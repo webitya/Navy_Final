@@ -4,6 +4,8 @@ import toast from 'react-hot-toast';
 export const sendEmail = async (emailDetails, setLoading) => {
     setLoading(true);
     try {
+
+        const token = localStorage.getItem('token');
         const response = await axios.post(`${import.meta.env.VITE_URI}/api/email/sendEmail`, emailDetails);
         if (response.data.success) {
             toast.success('Email sent successfully!');

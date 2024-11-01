@@ -30,11 +30,9 @@ export const UserDetailPopup = ({ user, onClose }) => {
             ["additionalCertificates", user.additionalCertificates],
         ];
 
-        // Add the user details table
         doc.text('User Details', 14, 16);
         doc.autoTable({ head: [["Field", "Value"]], body: userInfo, startY: 30 });
 
-        // Add educational details
         doc.text('Educational Certificates:', 14, doc.autoTable.previous.finalY + 10);
         const certificates = [
             ["10th Certificate", user.tenCertificate],
@@ -43,29 +41,24 @@ export const UserDetailPopup = ({ user, onClose }) => {
             ["Additional Certificates", user.additionalCertificates]
         ];
 
-        // Variables for positioning
-        let yPos = doc.autoTable.previous.finalY + 20; // Initial Y position for certificates
+        let yPos = doc.autoTable.previous.finalY + 20;
         const pageHeight = doc.internal.pageSize.height;
 
         certificates.forEach((cert, index) => {
             if (cert[1]) {
-                // Check if the next element will fit on the current page
                 if (yPos + 60 > pageHeight) {
-                    doc.addPage(); // Add a new page if the current page is full
-                    yPos = 20; // Reset Y position for new page
+                    doc.addPage();
+                    yPos = 20;
                 }
 
-                // Add Certificate Title
                 doc.text(cert[0], 14, yPos);
-                yPos += 10; // Move down for the image
+                yPos += 10;
 
-                // Add Certificate Image
-                doc.addImage(cert[1], 'PNG', 14, yPos, 80, 60); // Width of 80 and height of 60 for each image
-                yPos += 70; // Move down for the next certificate (image + spacing)
+                doc.addImage(cert[1], 'PNG', 14, yPos, 80, 60);
+                yPos += 70;
             }
         });
 
-        // Save the PDF
         doc.text(`Generated on: ${new Date().toLocaleString()}`, 14, doc.autoTable.previous.finalY + 60);
         doc.save(`${user.name}_details.pdf`);
     };
