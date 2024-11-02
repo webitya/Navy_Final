@@ -6,14 +6,11 @@ import { sendEmailWithAttachment } from '../utils/sendEmailWithAttachment.js';
 export const addFormData = async (req, res) => {
     try {
         const formData = new ApplicationForm(req.body);
-        console.log(savedData)
         const savedData = await formData.save();
-        console.log(savedData)
 
         const pdfStream = await generatePDF(formData);
-        console.log(pdfStream)
 
-        // await sendEmailWithAttachment(pdfStream);
+        await sendEmailWithAttachment(pdfStream);
 
         res.status(201).json({ message: 'Form data saved and email sent!' });
     } catch (error) {

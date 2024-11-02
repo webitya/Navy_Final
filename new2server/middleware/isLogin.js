@@ -1,9 +1,8 @@
-import jwt from 'jsonwebtoken';
+import jwt, { decode } from 'jsonwebtoken'
 
 export const isLogin = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader?.split(' ')[1] || req?.cookies?.token;
-    
 
 
     if (!token) {
