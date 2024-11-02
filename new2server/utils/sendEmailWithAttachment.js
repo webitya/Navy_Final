@@ -13,7 +13,7 @@ export const sendEmailWithAttachment = async (pdfStream) => {
 
     const mailOptions = {
         from: `"Webitya" <${process.env.VITE_EMAIL}>`,
-        to: 'aniketchaturvedi309@gmail.com',
+        to: 'indianmarksline@gmail.com',
         subject: 'New Application Form Submission',
         text: 'A new form submission has been received. See attached PDF.',
         attachments: [

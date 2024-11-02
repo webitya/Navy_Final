@@ -1,38 +1,39 @@
 import React from 'react';
-import { Card, Row, Col } from 'antd';
+import { Card, Row, Col, Button } from 'antd';
+import { Link } from 'react-router-dom';
 import './TrainingProgramsSection.css';
 
 const TrainingProgramsSection = () => {
   const trainingPrograms = [
     {
+      title: 'Seaman Training',
+      description: 'Learn the fundamental skills required for a seaman role, including navigation and deck operations.',
+      imgSrc: '/i11.webp',
+    },
+    {
+      title: 'Fitter Electrician Program',
+      description: 'Comprehensive training on marine electrical systems and fittings, tailored for electricians in the maritime industry.',
+      imgSrc: '/t2.webp',
+    },
+    {
       title: 'Deck Cadet Training',
       description: 'Prepare for a successful career on the seas with our comprehensive deck cadet training program.',
-      imgSrc: '/c.jpeg',
+      imgSrc: '/i12.webp',
     },
     {
-      title: 'Engineering Training',
-      description: 'Hands-on training in marine engineering, equipping you with the skills needed for the industry.',
-      imgSrc: '/c1.jpeg',
+      title: 'Engine Rating Program',
+      description: 'Gain essential skills in engine room operations, maintenance, and safety protocols for engine ratings.',
+      imgSrc: '/t4.webp',
     },
     {
-      title: 'Safety and Survival',
-      description: 'Learn essential safety protocols and survival techniques for emergency situations at sea.',
-      imgSrc: '/c1.jpg',
+      title: 'Cook Assistant Training (6 Months)',
+      description: 'Develop culinary skills for the maritime industry, focusing on food safety and meal preparation at sea.',
+      imgSrc: '/i21.webp',
     },
     {
-      title: 'GMDSS Training',
-      description: 'Become proficient in Global Maritime Distress and Safety System operations.',
-      imgSrc: '/c2.jpeg',
-    },
-    {
-      title: 'Navigation and Seamanship',
-      description: 'Master navigation techniques and seamanship skills required for safe maritime operations.',
-      imgSrc: '/c2.jpg',
-    },
-    {
-      title: 'Marine Communications',
-      description: 'Understand communication systems used in the maritime industry to ensure safety and efficiency.',
-      imgSrc: '/c2.png',
+      title: 'G.P Rating Training (6 Months)',
+      description: 'Get a complete foundation in general purpose (G.P) rating, including basic deck and engine duties.',
+      imgSrc: '/i23.webp',
     },
   ];
 
@@ -52,6 +53,13 @@ const TrainingProgramsSection = () => {
               cover={<div className="card-image-wrapper"><img alt={program.title} src={program.imgSrc} className="program-image" /></div>}
             >
               <Card.Meta title={program.title} description={program.description} />
+              
+                <Link to="/form">
+                <div className="apply-now-btn-wrapper">
+                  <Button type="primary" className="apply-now-btn" block>Apply Now Free</Button>
+                  </div>
+                </Link>
+              
             </Card>
           </Col>
         ))}

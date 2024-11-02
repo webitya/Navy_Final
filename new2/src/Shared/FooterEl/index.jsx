@@ -43,6 +43,7 @@ const FooterEl = () => {
     color: 'white',              // White links
     textDecoration: 'none',      // No underline
     transition: 'color 0.3s',   // Transition effect
+    padding:"10px 0px"
   };
 
   const linkHoverStyle = {
@@ -84,49 +85,49 @@ const FooterEl = () => {
         <div style={columnStyle}>
           <h5 style={titleStyle}>Training Programs</h5>
           <ul style={listStyle}>
-            <li><Link to="/training/courses" style={{ ...linkStyle, transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Nautical Science</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Marine Engineering</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Deck Cadet Training</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>GME Course</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Bridge Simulator Training</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Ship Management Training</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Safety Management Courses</Link></li>
-            <li><Link to="/training/courses" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Catering and Hospitality</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle, transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Nautical Science</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Marine Engineering</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Deck Cadet Training</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>GME Course</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Bridge Simulator Training</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Ship Management Training</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Safety Management Courses</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Catering and Hospitality</Link></li>
           </ul>
         </div>
 
         <div style={columnStyle}>
           <h5 style={titleStyle}>Quick Links</h5>
           <ul style={listStyle}>
-            <li><Link to="/vacancies" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Latest Vacancies</Link></li>
-            <li><Link to="/updates" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Latest Updates</Link></li>
+            <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Latest Vacancies</Link></li>
+            <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Latest Updates</Link></li>
             <li><Link to="/contact-us" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Contact Us</Link></li>
-            <li><Link to="/faq" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>FAQs</Link></li>
+            <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>FAQs</Link></li>
             <li><Link to="/login" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Login</Link></li>
-            <li><Link to="/register" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Register</Link></li>
-            <li><Link to="/testimonials" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Testimonials</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Register</Link></li>
+            <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Testimonials</Link></li>
           </ul>
         </div>
 
         <div style={columnStyle}>
           <h5 style={titleStyle}>Contact Information</h5>
-          <p><strong>Address:</strong> Ganga Nagar Harmu Ranchi, Ranchi Jharkhand</p>
-          <p><strong>Phone:</strong> +91 9693245941</p>
-          <p><strong>Email: </strong><a href="mailto:webitya@gmail.com" style={{ color: 'white' }}>webitya@gmail.com</a></p>
+          <p><strong>Address:</strong>Office no. 107, 1st Floor, Eklavya Tower, Dipatoli Pundag, Ranchi- 834004 (Jharkhand)</p>
+          <p><strong>Licence No:</strong>RAN37092121211697</p>
+          <p><strong>Phone:</strong> +91 8210546533</p>
+          <p><strong>Email: </strong><a href="mailto:webitya@gmail.com" style={{ color: 'white' }}>indianmarksline@gmail.com</a></p>
 
           <h5 style={titleStyle}>Follow Us</h5>
           <div className="social-icons" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="https://www.webitya.com" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><FacebookOutlined /></a>
-            <a href="https://www.webitya.com" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><TwitterOutlined /></a>
-            <a href="https://www.webitya.com" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><LinkedinOutlined /></a>
-            <a href="https://www.webitya.com" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><InstagramOutlined /></a>
-            <a href="https://www.webitya.com" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><YoutubeOutlined /></a>
+            <a href="https://www.facebook.com/profile.php?id=61567740908857" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><FacebookOutlined /></a>
+            <a href="https://x.com/indianmarksline" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><TwitterOutlined /></a>
+            <a href="https://www.linkedin.com/in/indian-marksline/" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><LinkedinOutlined /></a>
+            <a href="https://www.instagram.com/indianmarksline/" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><InstagramOutlined /></a>
+            <a href="https://www.youtube.com/@indianmarksline" target="_blank" rel="noopener noreferrer" style={socialIconStyle} onMouseEnter={(e) => e.currentTarget.style.color = socialHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}><YoutubeOutlined /></a>
           </div>
         </div>
       </div>
-
       <div style={footerBottomStyle}>
-        <p>All Copyright &copy; Reserved @2024 | Merchant Navy Center</p>
+        © {new Date().getFullYear()} INDIAN MARKSLINE. All rights reserved. Secured <Link to="https://www.webitya.com" target='_blank'>by Webitya Web Services</Link>
       </div>
     </footer>
   );

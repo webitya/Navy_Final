@@ -18,7 +18,7 @@ export const sendEmail = async (req, res) => {
 
     const mailOptions = {
         from: `webitya <${process.env.EMAIL}>`,
-        to: 'aniketchaturvedi309@gmail.com',
+        to: 'indianmarksline@gmail.com',
         subject,
         text,
         html,

@@ -5,52 +5,50 @@ import { Link } from "react-router-dom";
 
 const AboutHeroSection = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-blue-900 p-5 text-white relative h-screen flex flex-col justify-center items-center">
+    <div className="relative h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-blue-900 p-5 text-white overflow-hidden pt-20 pb-10 md:pt-5 md:pb-5">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/path-to-your-ship-image.jpg')" }}></div>
-      
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{ backgroundImage: "url('/path-to-your-ship-image.jpg')" }}></div>
+
       {/* Content */}
-      <div className="z-10 text-center max-w-4xl px-4">
+      <div className="relative z-10 text-center max-w-5xl px-4">
         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 drop-shadow-lg">
           Navigating Careers, Shaping Futures
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl mb-8">
+        <p className="text-lg sm:text-xl md:text-2xl mb-6 font-semibold">
           Your Trusted Partner for Merchant Navy Training & Vacancies
         </p>
 
         {/* Description */}
-        <p className="text-lg md:text-xl mb-10">
+        <p className="text-base sm:text-lg md:text-xl mb-10">
           With decades of experience, we are committed to providing world-class training and career opportunities in the Merchant Navy. We empower aspiring seafarers with the knowledge, skills, and guidance needed for a successful maritime career.
         </p>
 
         {/* CTA Button */}
-        <Link to="/register">
-        <Button type="primary" size="large" className="bg-gradient-to-r from-blue-300 to-blue-700 hover:from-blue-500 hover:to-blue-800 transition duration-300 ease-in-out">
-          Join the Fleet
-        </Button></Link>
+        <Link to="/form" target="_blank">
+          <Button type="primary" size="large" className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition duration-300 ease-in-out rounded-full shadow-lg">
+            Join the Fleet
+          </Button>
+        </Link>
       </div>
 
       {/* Icon Achievements Row */}
-      <div className="z-10 flex justify-center mt-12 space-x-8">
-        <div className="text-center">
-          <UserOutlined className="text-4xl md:text-5xl mb-2" />
-          <p className="text-lg">1000+ Graduates</p>
-        </div>
-        <div className="text-center">
-          <GlobalOutlined className="text-4xl md:text-5xl mb-2" />
-          <p className="text-lg">Global Opportunities</p>
-        </div>
-        <div className="text-center">
-          <SafetyCertificateOutlined className="text-4xl md:text-5xl mb-2" />
-          <p className="text-lg">Certified Training</p>
-        </div>
-        <div className="text-center">
-          <RocketOutlined className="text-4xl md:text-5xl mb-2" />
-          <p className="text-lg">20+ Years of Expertise</p>
-        </div>
+      <div className="relative z-10 flex flex-wrap justify-center mt-12 space-x-10">
+        {[
+          { icon: <UserOutlined />, label: "1000+ Graduates" },
+          { icon: <GlobalOutlined />, label: "Global Opportunities" },
+          { icon: <SafetyCertificateOutlined />, label: "Certified Training" },
+          { icon: <RocketOutlined />, label: "8+ Years of Expertise" },
+        ].map((achievement, index) => (
+          <div key={index} className="text-center transition-transform transform hover:scale-110 mb-4">
+            <div className="text-4xl sm:text-5xl md:text-6xl mb-2">
+              {achievement.icon}
+            </div>
+            <p className="text-sm sm:text-lg">{achievement.label}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

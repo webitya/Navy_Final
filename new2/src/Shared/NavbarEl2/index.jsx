@@ -71,7 +71,7 @@ const NavbarEl2 = () => {
             {user ? (
               <Button onClick={handleLogout} className="button-logout text-zinc-6000">Logout</Button>
             ) : (
-              <Link to="/login">
+              <Link to="/login" className="hidden">
                 <Button className="button-login text-zinc-600">Login</Button>
               </Link>
             )}
@@ -102,11 +102,11 @@ const NavbarEl2 = () => {
                 </Link>
               </li>
               <li className="flex gap-2">
-                <Link to="https://www.instagram.com/merchantnavycenter"><Button className="text-pink-500"><InstagramOutlined /></Button></Link>
-                <Link to="https://x.com/merchantnavycenter"><Button className="text-black"><XOutlined /></Button></Link>
-                <Link to="https://www.linkedin.com/company/merchant-navy-center"><Button className="text-blue-400"><LinkedinOutlined /></Button></Link>
-                <Link to="https://www.youtube.com/@MerchantNavyCenter"><Button className="text-red-600"><YoutubeOutlined /></Button></Link>
-                <Link to="https://www.facebook.com/MerchantNavyCenter"><Button className="text-blue-700"><FacebookOutlined /></Button></Link>
+                <Link to="https://www.instagram.com/indianmarksline.in/"  target="_blank"><Button className="text-pink-500"><InstagramOutlined /></Button></Link>
+                <Link to="https://x.com/indianmarksline" target="_blank"><Button className="text-black"><XOutlined /></Button></Link>
+                <Link to="https://www.linkedin.com/in/indian-marksline/" target="_blank"><Button className="text-blue-400"><LinkedinOutlined /></Button></Link>
+                <Link to="https://www.youtube.com/@INDIANMARKSLINE" target="_blank"><Button className="text-red-600"><YoutubeOutlined /></Button></Link>
+                <Link to="https://www.facebook.com/profile.php?id=61567740908857" target="_blank"><Button className="text-blue-700"><FacebookOutlined /></Button></Link>
               </li>
               <li><h1><b><PhoneOutlined className="text-green-900" /> Phone: </b><span>+91 1234567890</span></h1></li>
               <li><h1><b><MailOutlined className="text-blue-700" /> Email: </b><span>webitya@gmail.com</span></h1></li>

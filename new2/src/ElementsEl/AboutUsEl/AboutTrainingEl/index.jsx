@@ -21,7 +21,7 @@ const TrainingProgramsSection = () => {
             <p className="text-gray-700 mb-6">
               Our entry-level course provides a comprehensive introduction to maritime safety, navigation, and seamanship.
             </p>
-             <Link to="register">
+             <Link to="/form" target="_blank">
              <Button type="primary" className="mt-4">Learn More</Button></Link>
           </div>
 
@@ -32,7 +32,7 @@ const TrainingProgramsSection = () => {
             <p className="text-gray-700 mb-6">
               This program focuses on advanced navigation techniques, including radar operation, GPS systems, and chart plotting.
             </p>
-            <Link to="register">
+            <Link to="/form" target="_blank">
              <Button type="primary" className="mt-4">Learn More</Button></Link>
           </div>
 
@@ -43,7 +43,7 @@ const TrainingProgramsSection = () => {
             <p className="text-gray-700 mb-6">
               This course develops leadership and management skills for those aspiring to command positions in the maritime industry.
             </p>
-            <Link to="register">
+            <Link to="/form" target="_blank">
             <Button type="primary" className="mt-4">Learn More</Button></Link>
           </div>
         </div>

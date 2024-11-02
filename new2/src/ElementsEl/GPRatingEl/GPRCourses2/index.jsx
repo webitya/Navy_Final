@@ -7,6 +7,7 @@ import {
   LaptopOutlined,
   ReadOutlined,
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const CourseDetails2 = () => {
   return (
@@ -30,9 +31,10 @@ const CourseDetails2 = () => {
                 <li>🔹 <b>Placement Assistance:</b> Benefit from our partnerships with leading shipping companies for potential career opportunities.</li>
               </ul>
             </div>
+            <Link to="/form" target='_blank'>
             <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full hover:bg-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
               Apply Now
-            </button>
+            </button></Link>
           </div>
 
           {/* Right Column - Course Offerings */}

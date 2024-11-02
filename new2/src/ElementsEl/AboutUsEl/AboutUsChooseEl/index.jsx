@@ -8,7 +8,7 @@ const WhyChooseUsSection = () => {
         {/* Left Side - Feature Image */}
         <div className="md:w-1/2 mb-8 md:mb-0">
           <img 
-            src="/c4.jpg" 
+            src="/i10.webp" 
             alt="Why Choose Us" 
             className="w-full h-auto rounded-lg shadow-lg"
           />
