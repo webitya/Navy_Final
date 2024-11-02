@@ -104,7 +104,8 @@ const FooterEl = () => {
             <li><Link to="/contact-us" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Contact Us</Link></li>
             <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>FAQs</Link></li>
             <li><Link to="/login" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Login</Link></li>
-            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Register</Link></li>
+            <li><Link to="/form" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Apply Now Free</Link></li>
+            <li><Link to="/admin" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Admin Login</Link></li>
             <li><Link to="/" style={{ ...linkStyle }} onMouseEnter={(e) => e.currentTarget.style.color = linkHoverStyle.color} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>Testimonials</Link></li>
           </ul>
         </div>
