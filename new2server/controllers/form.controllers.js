@@ -28,7 +28,7 @@ export const getFormData = async (req, res) => {
         if (!formData || formData.length === 0) {
             return res.status(404).json({
                 message: 'No data found',
-                data: null
+                data: []
             });
         }
 
@@ -82,7 +82,7 @@ export const getQueryData = async (req, res) => {
         if (!stats || stats.length === 0) {
             return res.status(404).json({
                 message: 'No data found',
-                data: null
+                data: []
             });
         }
 
