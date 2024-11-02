@@ -35,10 +35,10 @@ export const generatePDF = async (user) => {
             ["Email", getValue(user?.presentAddress?.emailId)],
             ["Mobile", getValue(user?.presentAddress?.mob1)],
             ["Profile Photo URI", getValue(user?.photo)],
-            ["10th Certificate", getValue(user?.tenCertificate)],
-            ["12th Certificate", getValue(user?.twelveCertificate)],
-            ["ITI Certificate", getValue(user?.itiCertificate)],
-            ["Additional Certificates", getValue(user?.additionalCertificates)],
+            ["10th Certificate", getValue(user?.tenCertificates)],
+            ["12th Certificate", getValue(user?.twelveCertificates)],
+            ["ITI Certificate", getValue(user?.itiCertificates)],
+            ["Additional Certificates", getValue(user?.additionalDocument)],
         ];
 
         // Add a title and spacing

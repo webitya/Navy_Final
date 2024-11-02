@@ -39,7 +39,6 @@ export const ApplicationForm = () => {
     }, [formData]);
 
     const onSubmit = async (data) => {
-        console.log("Form submitted", data);
         setLoading(true)
 
         if (profilePic) {
@@ -57,6 +56,8 @@ export const ApplicationForm = () => {
         if (twelveCertificate) {
             data.twelveCertificates = await useUploadImage(twelveCertificate, false)
         }
+
+        console.log("Form submitted", data);
 
         const response = await useSubmitFormData(data, setLoading)
         if (response) {
@@ -129,55 +130,55 @@ export const ApplicationForm = () => {
 
 
                     <div className="mb-5">
-    <label className="block mb-1">
-        Caste
-        <span className="text-red-500">{isFieldRequired('caste') && '*'}</span>
-    </label>
-    <select
-        {...register('caste')}
-        className="border rounded-lg p-2 w-full"
-    >
-        <option value="">Select Caste</option>
-        <option value="general">General</option>
-        <option value="obc">OBC</option>
-        <option value="sc">SC</option>
-        <option value="st">ST</option>
-        <option value="other">Other</option>
-    </select>
-    <span className="text-red-500">
-        {errors['caste']?.message}
-    </span>
-</div>
+                        <label className="block mb-1">
+                            Caste
+                            <span className="text-red-500">{isFieldRequired('caste') && '*'}</span>
+                        </label>
+                        <select
+                            {...register('caste')}
+                            className="border rounded-lg p-2 w-full"
+                        >
+                            <option value="">Select Caste</option>
+                            <option value="general">General</option>
+                            <option value="obc">OBC</option>
+                            <option value="sc">SC</option>
+                            <option value="st">ST</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span className="text-red-500">
+                            {errors['caste']?.message}
+                        </span>
+                    </div>
 
-<div className="mb-5">
-    <label className="block mb-1">
-        Father's Name
-        <span className="text-red-500">{isFieldRequired('fatherName') && '*'}</span>
-    </label>
-    <input
-        {...register('fatherName')}
-        className="border rounded-lg p-2 w-full"
-        type="text"
-    />
-    <span className="text-red-500">
-        {errors['fatherName']?.message}
-    </span>
-</div>
+                    <div className="mb-5">
+                        <label className="block mb-1">
+                            Father's Name
+                            <span className="text-red-500">{isFieldRequired('fatherName') && '*'}</span>
+                        </label>
+                        <input
+                            {...register('fatherName')}
+                            className="border rounded-lg p-2 w-full"
+                            type="text"
+                        />
+                        <span className="text-red-500">
+                            {errors['fatherName']?.message}
+                        </span>
+                    </div>
 
-<div className="mb-5">
-    <label className="block mb-1">
-        Father's Occupation
-        <span className="text-red-500">{isFieldRequired('fatherOccupation') && '*'}</span>
-    </label>
-    <input
-        {...register('fatherOccupation')}
-        className="border rounded-lg p-2 w-full"
-        type="text"
-    />
-    <span className="text-red-500">
-        {errors['fatherOccupation']?.message}
-    </span>
-</div>
+                    <div className="mb-5">
+                        <label className="block mb-1">
+                            Father's Occupation
+                            <span className="text-red-500">{isFieldRequired('fatherOccupation') && '*'}</span>
+                        </label>
+                        <input
+                            {...register('fatherOccupation')}
+                            className="border rounded-lg p-2 w-full"
+                            type="text"
+                        />
+                        <span className="text-red-500">
+                            {errors['fatherOccupation']?.message}
+                        </span>
+                    </div>
 
 
 
@@ -265,9 +266,9 @@ export const ApplicationForm = () => {
                                                 if (!file) return; // If no file selected, do nothing
 
                                                 // Update the corresponding certificate state based on the grade
-                                                if (grade === 'ten') setTenCertificate(file);
-                                                else if (grade === 'twelve') setTwelveCertificate(file);
-                                                else if (grade === 'iti') setItiCertificate(file);
+                                                if (grade === 'Tenth') setTenCertificate(file);
+                                                else if (grade === 'Twelve') setTwelveCertificate(file);
+                                                else if (grade === 'ITI') setItiCertificate(file);
                                             }}
                                             className="border rounded-lg p-2 w-full"
                                             accept=".pdf,.jpg,.jpeg,.png"
