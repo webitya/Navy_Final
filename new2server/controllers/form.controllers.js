@@ -6,9 +6,7 @@ import { sendEmailWithAttachment } from '../utils/sendEmailWithAttachment.js';
 export const addFormData = async (req, res) => {
     try {
 
-        console.log(req.body)
         const formData = new ApplicationForm(req.body);
-        console.log(formData)
 
         const savedData = await formData.save();
 

@@ -15,7 +15,6 @@ export const Login = async (req, res) => {
         const hardcodedPassword = 'example123';
 
         if (email !== hardcodedEmail || password !== hardcodedPassword) {
-            console.log(hardcodedEmail, hardcodedPassword)
             return res.status(401).json({
                 message: 'Invalid email or password',
             });
