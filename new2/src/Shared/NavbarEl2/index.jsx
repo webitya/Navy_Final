@@ -108,9 +108,10 @@ const NavbarEl2 = () => {
                 <Link to="https://www.youtube.com/@INDIANMARKSLINE" target="_blank"><Button className="text-red-600"><YoutubeOutlined /></Button></Link>
                 <Link to="https://www.facebook.com/profile.php?id=61567740908857" target="_blank"><Button className="text-blue-700"><FacebookOutlined /></Button></Link>
               </li>
-              <li><h1><b><PhoneOutlined className="text-green-900" /> Phone: </b><span>+91 1234567890</span></h1></li>
-              <li><h1><b><MailOutlined className="text-blue-700" /> Email: </b><span>webitya@gmail.com</span></h1></li>
-              <li><h1><b><BlockOutlined className="text-red-500" /> Address: </b><span>Vidya Nagar Harmu Ranchi, <br /> Jharkhand, INDIA</span></h1></li>
+              <li><h1><b><PhoneOutlined className="text-green-900" /> Phone: </b><span>+91 7766039446</span></h1></li>
+              <li><h1><b><MailOutlined className="text-blue-700" /> Email: </b><span>indianmarksline@gmail.com</span></h1></li>
+              <li><p><strong>Licence No:</strong>RAN37092121211697</p></li>
+              <li><h1><b><BlockOutlined className="text-red-500" /> Address: </b><span>Office no. 107, 1st Floor, Eklavya Tower, Dipatoli Pundag, Ranchi- 834004</span></h1></li>
             </ul>
           </div>
         </Drawer>

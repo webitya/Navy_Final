@@ -1,0 +1,118 @@
+.carousel-container {
+    position: relative;
+  }
+  
+  .carousel-slide {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: rgba(250, 240, 240, 0.6); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+  }
+  
+  .carousel-description {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  .carousel-button {
+    background-color: #0056b3;
+    border: none;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-button:hover {
+    background-color: #003d7a;
+    transform: scale(1.05);
+  }
+  
+  /* Custom Arrows */
+
+
+  
+  /* Slide Specific Backgrounds */
+  .slide-1 {
+    background:url('/i1.webp') no-repeat center center/cover;
+  }
+  
+  .slide-2 {
+    background:url('/i2.webp') no-repeat center center/cover;
+  }
+  
+  .slide-3 {
+    background:url('/i3.webp') no-repeat center center/cover;
+  }
+  .slide-4 {
+    background:url('/i4.webp') no-repeat center center/cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel-title {
+      font-size: 2rem;
+    }
+  
+    .carousel-description {
+      font-size: 1rem;
+    }
+  
+    .carousel-button {
+      font-size: 0.875rem;
+      padding: 10px 20px;
+    }
+    .carousel-slide {
+      height: 235px;
+    }
+  }
+  /* Custom Arrows */
+.arrow {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 12px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #ffffff;
+    outline:none;
+    border:none;
+    color:rgb(0, 102, 255);
+   
+  }
+  .left-arrow {
+    left:10px;
+  }
+  
+  .right-arrow {
+    right:10px;
+  }
+  

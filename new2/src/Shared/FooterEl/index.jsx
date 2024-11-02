@@ -113,7 +113,7 @@ const FooterEl = () => {
           <h5 style={titleStyle}>Contact Information</h5>
           <p><strong>Address:</strong>Office no. 107, 1st Floor, Eklavya Tower, Dipatoli Pundag, Ranchi- 834004 (Jharkhand)</p>
           <p><strong>Licence No:</strong>RAN37092121211697</p>
-          <p><strong>Phone:</strong> +91 8210546533</p>
+          <p><strong>Phone:</strong> +91 7766039446</p>
           <p><strong>Email: </strong><a href="mailto:webitya@gmail.com" style={{ color: 'white' }}>indianmarksline@gmail.com</a></p>
 
           <h5 style={titleStyle}>Follow Us</h5>
