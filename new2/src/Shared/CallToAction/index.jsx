@@ -16,9 +16,9 @@ const CallToActionSection = () => {
           Enroll in one of our comprehensive maritime training programs and gain
           the skills needed for success at sea. Join a global fleet of skilled seafarers.
         </p>
-        <Link to="/register">
+        <Link to="/form">
           <Button type="primary" size="large" className="cta-button">
-            Enroll Now
+            Apply Now Free
           </Button>
         </Link>
       </div>
