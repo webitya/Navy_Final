@@ -26,7 +26,7 @@ const HomeCarouselEl = () => {
       <Carousel
         ref={carouselRef}
         autoplay
-        autoplaySpeed={3000}
+        autoplaySpeed={2000}
         dotPosition="bottom"
         effect="fade"
       >
