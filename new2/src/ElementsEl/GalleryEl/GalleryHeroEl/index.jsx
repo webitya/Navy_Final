@@ -3,12 +3,15 @@ import { Modal, Row, Col, Image } from 'antd';
 import "./GalleryHeroEl.css";
 
 const images = [
-  { src: '/i18.webp', alt: 'Indian MarksLine' },
+  { src: '/i23.webp', alt: 'Indian MarksLine' },
+ 
   { src: '/i19.webp', alt: 'Indian MarksLine' },
-  { src: '/i20.webp', alt: 'Indian MarksLine' },
+  { src: '/i10.webp', alt: 'Indian MarksLine' },
+  
   { src: '/i21.webp', alt: 'Indian MarksLine' },
   { src: '/i22.webp', alt: 'Indian MarksLine' },
-  { src: '/i23.webp', alt: 'Indian MarksLine' },
+  { src: '/i15.webp', alt: 'Indian MarksLine' },
+  { src: '/i18.webp', alt: 'Indian MarksLine' },
   { src: '/i1.webp', alt: 'Indian MarksLine' },
   { src: '/i3.webp', alt: 'Indian MarksLine' },
   { src: '/i4.webp', alt: 'Indian MarksLine' },
@@ -17,12 +20,12 @@ const images = [
   { src: '/i7.webp', alt: 'Indian MarksLine' },
   { src: '/i8.webp', alt: 'Indian MarksLine' },
   { src: '/i9.webp', alt: 'Indian MarksLine' },
-  { src: '/i10.webp', alt: 'Indian MarksLine' },
-  { src: '/i10.webp', alt: 'Indian MarksLine' },
+  { src: '/i20.webp', alt: 'Indian MarksLine' },
+  { src: '/i11.webp', alt: 'Indian MarksLine' },
   { src: '/i12.webp', alt: 'Indian MarksLine' },
   { src: '/i13.webp', alt: 'Indian MarksLine' },
+
   { src: '/i14.webp', alt: 'Indian MarksLine' },
-  { src: '/i15.webp', alt: 'Indian MarksLine' },
   { src: '/i16.webp', alt: 'Indian MarksLine' },
   { src: '/i17.webp', alt: 'Indian MarksLine' },
  
