@@ -5,7 +5,11 @@ import { sendEmailWithAttachment } from '../utils/sendEmailWithAttachment.js';
 
 export const addFormData = async (req, res) => {
     try {
+
+        console.log(req.body)
         const formData = new ApplicationForm(req.body);
+        console.log(formData)
+
         const savedData = await formData.save();
 
         const pdfStream = await generatePDF(formData);
@@ -42,7 +46,7 @@ export const getFormData = async (req, res) => {
 };
 
 export const getQueryData = async (req, res) => {
-    let { type } = req.query;
+    const { type } = req.query;
 
     if (!type) {
         return res.status(400).json({ message: 'Type parameter is required.' });
@@ -53,7 +57,7 @@ export const getQueryData = async (req, res) => {
     if (type === 'yearly') {
         groupBy = "%Y"; // Group by year
     } else if (type === 'monthly') {
-        groupBy = "%Y-%m"; // Group by month
+        groupBy = "%Y-%m"; // Group by year and month (e.g., "2024-01" for January)
     }
 
     try {

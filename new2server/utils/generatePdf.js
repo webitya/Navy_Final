@@ -2,10 +2,8 @@ import { jsPDF } from 'jspdf';
 import { Buffer } from 'buffer'; // Use buffer from 'buffer' in Node.js
 
 export const generatePDF = async (user) => {
-    console.log(user)
     try {
         const doc = new jsPDF();
-        console.log(user)
         // Helper function to safely access nested properties
         const getValue = (value, fallback = 'N/A') =>
             value !== undefined && value !== null ? value.toString() : fallback;
@@ -37,10 +35,10 @@ export const generatePDF = async (user) => {
             ["Email", getValue(user?.presentAddress?.emailId)],
             ["Mobile", getValue(user?.presentAddress?.mob1)],
             ["Profile Photo URI", getValue(user?.photo)],
-            ["10th Certificate", getValue(user?.tenCertificate)],
-            ["12th Certificate", getValue(user?.twelveCertificate)],
-            ["ITI Certificate", getValue(user?.itiCertificate)],
-            ["Additional Certificates", getValue(user?.additionalCertificates)],
+            ["10th Certificate", getValue(user?.tenCertificates)],
+            ["12th Certificate", getValue(user?.twelveCertificates)],
+            ["ITI Certificate", getValue(user?.itiCertificates)],
+            ["Additional Certificates", getValue(user?.additionalDocument)],
         ];
 
         // Add a title and spacing

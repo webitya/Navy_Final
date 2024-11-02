@@ -45,14 +45,13 @@ const formSchema = new mongoose.Schema({
         default: "Seaman"
     },
     name: { type: String, required: true },
-    caste: { type: String, required: false }, // Optional as per Zod schema
+    caste: { type: String, required: false },
     fatherName: { type: String, required: true },
-    fatherOccupation: { type: String, required: false }, // Optional as per Zod schema
-
+    fatherOccupation: { type: String, required: false },
     presentAddress: { type: addressSchema, required: true },
-    permanentAddress: { type: addressSchema, required: false }, // Optional as per Zod schema
+    permanentAddress: { type: addressSchema, required: false },
 
-    educationalParticulars: { type: educationalParticularsSchema, required: true }, // Required as per Zod schema
+    educationalParticulars: { type: educationalParticularsSchema, required: true },
 
     nationality: { type: String, required: true },
     maritalStatus: {
@@ -68,7 +67,7 @@ const formSchema = new mongoose.Schema({
             message: "Invalid date format"
         }
     },
-    visibleIdentificationMark: { type: String, required: false }, // Optional as per Zod schema
+    visibleIdentificationMark: { type: String, required: false },
     state: {
         type: String,
         enum: ['pending', 'approved'],
@@ -78,10 +77,10 @@ const formSchema = new mongoose.Schema({
         type: String,
         default: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
     },
-    tenCertificate: { type: String, required: false }, // Optional as per Zod schema
-    twelveCertificate: { type: String, required: false }, // Optional as per Zod schema
-    itiCertificate: { type: String, required: false }, // Optional as per Zod schema
-    additionalCertificates: { type: String, required: false }, // Optional as per Zod schema
+    tenCertificates: { type: String },
+    twelveCertificates: { type: String },
+    itiCertificates: { type: String },
+    additionalDocument: { type: String },
 }, { timestamps: true });
 
 export const ApplicationForm = mongoose.model("ApplicationForm", formSchema);
