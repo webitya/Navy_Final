@@ -8,7 +8,7 @@ const TrainingHeroSection = () => {
     <div className="relative">
       {/* Hero Section with Background Image */}
       <div
-        className="h-[90vh] bg-[url('/c4.jpg')] bg-cover bg-center relative"
+        className="h-[90vh] bg-[url('/i23.webp')] bg-cover bg-center relative"
         style={{ backgroundAttachment: 'fixed' }} // Parallax effect (optional)
       >
         {/* Overlay */}
