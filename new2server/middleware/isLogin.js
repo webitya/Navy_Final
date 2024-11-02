@@ -4,6 +4,7 @@ export const isLogin = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader?.split(' ')[1] || req?.cookies?.token;
 
+
     if (!token) {
         return res.status(402).json({
             message: 'Unauthorized: No token provided',

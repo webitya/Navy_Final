@@ -3,12 +3,34 @@ import { Modal, Row, Col, Image } from 'antd';
 import "./GalleryHeroEl.css";
 
 const images = [
-  { src: '/c.jpeg', alt: 'Image 1' },
-  { src: '/c1.jpeg', alt: 'Image 2' },
-  { src: '/c1.jpg', alt: 'Image 3' },
-  { src: '/c2.jpeg', alt: 'Image 4' },
-  { src: '/c3.jpg', alt: 'Image 5' },
-  { src: '/c5.jpeg', alt: 'Image 6' },
+  { src: '/i23.webp', alt: 'Indian MarksLine' },
+ 
+  { src: '/i19.webp', alt: 'Indian MarksLine' },
+  { src: '/i10.webp', alt: 'Indian MarksLine' },
+  
+  { src: '/i21.webp', alt: 'Indian MarksLine' },
+  { src: '/i22.webp', alt: 'Indian MarksLine' },
+  { src: '/i15.webp', alt: 'Indian MarksLine' },
+  { src: '/i18.webp', alt: 'Indian MarksLine' },
+  { src: '/i1.webp', alt: 'Indian MarksLine' },
+  { src: '/i3.webp', alt: 'Indian MarksLine' },
+  { src: '/i4.webp', alt: 'Indian MarksLine' },
+  { src: '/i5.webp', alt: 'Indian MarksLine' },
+  { src: '/i6.webp', alt: 'Indian MarksLine' },
+  { src: '/i7.webp', alt: 'Indian MarksLine' },
+  { src: '/i8.webp', alt: 'Indian MarksLine' },
+  { src: '/i9.webp', alt: 'Indian MarksLine' },
+  { src: '/i20.webp', alt: 'Indian MarksLine' },
+  { src: '/i11.webp', alt: 'Indian MarksLine' },
+  { src: '/i12.webp', alt: 'Indian MarksLine' },
+  { src: '/i13.webp', alt: 'Indian MarksLine' },
+
+  { src: '/i14.webp', alt: 'Indian MarksLine' },
+  { src: '/i16.webp', alt: 'Indian MarksLine' },
+  { src: '/i17.webp', alt: 'Indian MarksLine' },
+ 
+
+
   // Add more images as needed
 ];
 
@@ -26,14 +48,14 @@ const GalleryHeroEl = () => {
   };
 
   return (
-    <div className="p-10 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-6">Gallery</h2>
+    <div className="py-5 px-5 bg-white">
+      <h2 className="text-3xl font-bold text-center mb-1">Gallery</h2>
       <Row gutter={16}>
         {images.map((image, index) => (
           <Col xs={24} sm={12} md={8} lg={6} key={index} className="mb-4">
             <div
               style={{
-                height: '300px',
+                height: '230px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

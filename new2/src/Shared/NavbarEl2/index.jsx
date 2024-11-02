@@ -1,4 +1,4 @@
-import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined } from "@ant-design/icons";
+import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined, FormOutlined } from "@ant-design/icons";
 import { Button, Drawer, Modal } from "antd";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -76,7 +76,7 @@ const NavbarEl2 = () => {
               </Link>
             )}
             {!user && (
-              <Button onClick={openModal} className="button-apply text-green-700">Apply Now</Button>
+              <Button  onClick={openModal} className="button-apply text-green-700">Apply Now Free <FormOutlined/></Button>
             )}
           </ul>
         </div>
@@ -98,7 +98,7 @@ const NavbarEl2 = () => {
               <li onClick={() => setOpenMenu(false)}><Link to="/contact-us">Contact Us</Link></li>
               <li>
                 <Link to="/form">
-                  <Button className="bg-blue-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-700">Apply Now</Button>
+                  <Button  className="bg-blue-500 text-xl text-white font-semibold rounded-lg px-5 py-3 hover:bg-blue-700">Apply Now Free <FormOutlined/></Button>
                 </Link>
               </li>
               <li className="flex gap-2">
