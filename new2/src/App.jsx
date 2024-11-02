@@ -17,7 +17,6 @@ import Contact from './components/Contact';
 import GPRating from './components/GPRating';
 import CCMC from './components/CCMC';
 import Gallery from './components/Gallery';
-import ApplicationForm2 from './Shared/Applli2';
 
 function App() {
   return (
@@ -31,14 +30,13 @@ function App() {
           <Route path="/form" element={<ApplicationForm />} />
           <Route path="/success" element={<SubmissionSuccess />} />
           {/* <Route path="/contact" element={<ContactPage />} /> */}
-          <Route path="/about-us" element={<AboutUs/>} />
-          <Route path="/training" element={<Training/>} />
-          <Route path="/vacancy" element={<Vacancy/>} />
-          <Route path="/contact-us" element={<Contact/>} />
-          <Route path="/gp-rating" element={<GPRating/>} />
-          <Route path="/ccmc" element={<CCMC/>} />
-          <Route path="/gallery" element={<Gallery/>} />
-          <Route path="/appli" element={<ApplicationForm2/>} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/vacancy" element={<Vacancy />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/gp-rating" element={<GPRating />} />
+          <Route path="/ccmc" element={<CCMC />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route
             path="/admin"
             element={

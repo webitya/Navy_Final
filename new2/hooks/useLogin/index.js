@@ -13,7 +13,7 @@ export const useLogin = async (data, setUser) => {
         return true
     } catch (error) {
         setUser(null)
-        toast.error(error?.response?.data?.message)
+        toast.error(error?.response?.data?.message || "please try again later")
         return false
     }
 }

@@ -16,7 +16,6 @@ export const useGetCurrUser = async (setUser) => {
         setUser(response.data.data);
         return true;
     } catch (error) {
-        toast.error('Failed to fetch user data');
         return false;
     }
 };
