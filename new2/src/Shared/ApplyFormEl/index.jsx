@@ -33,7 +33,6 @@ export const ApplicationForm = () => {
         formSchema.safeParseAsync(formData).then((result) => {
             if (!result.success) {
                 console.clear(); // Clear previous logs
-                console.log("Validation errors:", result.error.format());
             }
         });
     }, [formData]);
@@ -57,7 +56,6 @@ export const ApplicationForm = () => {
             data.twelveCertificates = await useUploadImage(twelveCertificate, false)
         }
 
-        console.log("Form submitted", data);
 
         const response = await useSubmitFormData(data, setLoading)
         if (response) {
