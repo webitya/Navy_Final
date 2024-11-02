@@ -40,7 +40,7 @@ export const AdminPanel = () => {
                 }, { withCredentials: true });
                 setForms(response.data.data);
             } catch (err) {
-                setError('Failed to fetch forms. Please try again later.');
+                setError(err?.response.data?.message || "internal server error please try again");
             }
         };
 
@@ -59,7 +59,7 @@ export const AdminPanel = () => {
                 }));
                 setStats(formattedStats);
             } catch (err) {
-                setError('Failed to fetch statistics. Please try again later.');
+                setError(err?.response.data?.message || "internal server error please try again");
             }
         };
 
