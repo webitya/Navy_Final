@@ -31,9 +31,9 @@ const CarouselEl = () => {
         {/* Slide 1 */}
         <div className="carousel-slide slide-1">
           <div className="carousel-overlay">
-            <h1 className="carousel-title">Explore the Depths of Maritime Excellence</h1>
+            <h1 className="carousel-title">Join the Course: Cook Assistant - 6 Months</h1>
             <Link to="/form">
-              <Button type="primary" size="large" className="carousel-button">Enroll Now</Button>
+              <Button type="primary" size="large" className="carousel-button">Join the Course</Button>
             </Link>
           </div>
         </div>
@@ -41,9 +41,9 @@ const CarouselEl = () => {
         {/* Slide 2 */}
         <div className="carousel-slide slide-2">
           <div className="carousel-overlay">
-            <h1 className="carousel-title">Navigate Your Career to New Horizons</h1>
+            <h1 className="carousel-title">Enroll the Course: GP Rating - 6 Months</h1>
             <Link to="/form">
-              <Button type="primary" size="large" className="carousel-button">Learn More</Button>
+              <Button type="primary" size="large" className="carousel-button">Enroll the Course</Button>
             </Link>
           </div>
         </div>
@@ -51,9 +51,9 @@ const CarouselEl = () => {
         {/* Slide 3 */}
         <div className="carousel-slide slide-3">
           <div className="carousel-overlay">
-            <h1 className="carousel-title">Join a Global Fleet of Professionals</h1>
+            <h1 className="carousel-title">Free Apply: Deck Cadet, Fitter, Electrician</h1>
             <Link to="/form">
-              <Button type="primary" size="large" className="carousel-button">Contact Us</Button>
+              <Button type="primary" size="large" className="carousel-button">Free Apply</Button>
             </Link>
           </div>
         </div>
@@ -61,9 +61,9 @@ const CarouselEl = () => {
         {/* Slide 4 */}
         <div className="carousel-slide slide-4">
           <div className="carousel-overlay">
-            <h1 className="carousel-title">Chart Your Path with Our Expertise</h1>
+            <h1 className="carousel-title">Seaman & Deck Cadet Programs</h1>
             <Link to="/form">
-              <Button type="primary" size="large" className="carousel-button">Start Today</Button>
+              <Button type="primary" size="large" className="carousel-button">Enroll Now</Button>
             </Link>
           </div>
         </div>
