@@ -1,4 +1,4 @@
-import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined, FormOutlined } from "@ant-design/icons";
+import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined, FormOutlined, SolutionOutlined, FieldTimeOutlined, EyeOutlined, SafetyCertificateOutlined, IdcardOutlined, CheckCircleOutlined } from "@ant-design/icons";
 import { Button, Drawer, Modal } from "antd";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -116,7 +116,7 @@ const NavbarEl2 = () => {
           </div>
         </Drawer>
       </div>
-      <Modal
+      {/* <Modal
         open={isModalOpen}
         onCancel={closeModal}
         footer={[
@@ -126,7 +126,46 @@ const NavbarEl2 = () => {
       >
         <h2 className="modal-title">Application Instructions</h2>
         <p className="modal-text">Please read the following instructions carefully before proceeding to the form.</p>
-      </Modal>
+      </Modal> */}
+<Modal
+  open={isModalOpen}
+  onCancel={closeModal}
+  footer={[
+    <Button key="cancel" onClick={closeModal} className="modal-cancel">Cancel</Button>,
+    <Button key="confirm" onClick={handleConfirm} className="modal-confirm">Confirm</Button>
+  ]}
+  className="merchant-navy-modal"
+>
+  <h2 className="modal-title">Commerce & Arts Students Can Join Merchant Navy</h2>
+  <p className="modal-text">
+    Become an <strong className="highlight-text">#Officer</strong> in the Merchant Navy! Here are the requirements:
+  </p>
+  <div className="modal-rules">
+    <div className="rule">
+      <SolutionOutlined className="rule-icon" />
+      <span className="rule-text">10th Pass with ≥ 40% marks</span>
+    </div>
+    <div className="rule">
+      <FieldTimeOutlined className="rule-icon" />
+      <span className="rule-text">Age Limit: 18-25</span>
+    </div>
+    <div className="rule">
+      <EyeOutlined className="rule-icon" />
+      <span className="rule-text">Eye Sight: 6/6</span>
+    </div>
+    <div className="rule">
+      <SafetyCertificateOutlined className="rule-icon" />
+      <span className="rule-text">Medically Fit</span>
+    </div>
+    <div className="rule">
+      <IdcardOutlined className="rule-icon" />
+      <span className="rule-text">Valid Aadhar Card</span>
+    </div>
+  </div>
+  <p className="modal-course">
+    <CheckCircleOutlined className="course-icon" /> Indian Marksline offers a <strong>6 Months G.P. Rating Course</strong> for students who wish to join the engine or deck crew.
+  </p>
+</Modal>
     </>
   );
   return display;

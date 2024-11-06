@@ -40,4 +40,59 @@
         display:none;
      }
 } 
-
+/* ===========Modal IOnstruction=============== */
+.merchant-navy-modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0050b3;
+  }
+  
+  .merchant-navy-modal .modal-text {
+    font-size: 1.1rem;
+    color: #595959;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .merchant-navy-modal .modal-rules {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+  
+  .merchant-navy-modal .rule {
+    display: flex;
+    align-items: center;
+    background: #f0f5ff;
+    border: 1px solid #d6e4ff;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #434343;
+  }
+  
+  .merchant-navy-modal .rule-icon {
+    font-size: 1.5rem;
+    color: #52c41a;
+    margin-right: 0.5rem;
+  }
+  
+  .merchant-navy-modal .modal-course {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #0050b3;
+    margin-top: 1.5rem;
+  }
+  
+  .merchant-navy-modal .course-icon {
+    font-size: 1.5rem;
+    color: #faad14;
+    margin-right: 0.5rem;
+  }
+  
+  .highlight-text {
+    color: #fa541c;
+  }
+  
