@@ -1,5 +1,5 @@
-import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined, FormOutlined, SolutionOutlined, FieldTimeOutlined, EyeOutlined, SafetyCertificateOutlined, IdcardOutlined, CheckCircleOutlined } from "@ant-design/icons";
-import { Button, Drawer, Modal } from "antd";
+import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, MenuOutlined, PhoneOutlined, XOutlined, YoutubeOutlined, MailOutlined, BlockOutlined, FormOutlined, SolutionOutlined, FieldTimeOutlined, EyeOutlined, SafetyCertificateOutlined, IdcardOutlined, CheckCircleOutlined, ExclamationCircleOutlined } from "@ant-design/icons";
+import { Alert, Button, Drawer, Modal } from "antd";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAppContext } from "../../../context";
@@ -140,6 +140,7 @@ const NavbarEl2 = () => {
   <p className="modal-text">
     Become an <strong className="highlight-text">#Officer</strong> in the Merchant Navy! Here are the requirements:
   </p>
+  
   <div className="modal-rules">
     <div className="rule">
       <SolutionOutlined className="rule-icon" />
@@ -159,12 +160,22 @@ const NavbarEl2 = () => {
     </div>
     <div className="rule">
       <IdcardOutlined className="rule-icon" />
-      <span className="rule-text">Valid Aadhar Card</span>
+      <span className="rule-text">Valid Passport</span>
     </div>
   </div>
+
   <p className="modal-course">
     <CheckCircleOutlined className="course-icon" /> Indian Marksline offers a <strong>6 Months G.P. Rating Course</strong> for students who wish to join the engine or deck crew.
   </p>
+
+  <Alert
+    message="Important"
+    description="Please upload only JPG, JPEG, and PNG images."
+    type="warning"
+    icon={<ExclamationCircleOutlined/>}
+    showIcon
+    className="upload-instruction"
+  />
 </Modal>
     </>
   );

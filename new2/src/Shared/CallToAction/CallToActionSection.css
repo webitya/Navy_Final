@@ -88,3 +88,75 @@
     font-size: 0.9rem;
   }
 }
+/* =========== */
+/* CallToActionSection.css */
+.cta-section {
+  background-color: #003366; /* Dark navy background */
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffcc00; /* Gold for a premium feel */
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6b800; /* Slightly darker gold on hover */
+}
+
+/* Modal customization */
+.ant-modal-content {
+  border-radius: 12px;
+  background-color: #f0f5ff;
+}
+
+.ant-modal-title {
+  color: #003366;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.modal-requirements {
+  font-size: 1rem;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+.modal-requirements div {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #333333;
+  margin: 0.5rem 0;
+}
+
+.modal-requirements svg {
+  color: #ffcc00; /* Icon color */
+  margin-right: 8px;
+}
+
+.modal-alert {
+  margin-top: 1rem;
+}
