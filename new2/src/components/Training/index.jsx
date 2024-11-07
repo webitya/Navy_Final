@@ -1,3 +1,4 @@
+import TrainingElFeatures from "../../ElementsEl/TrainingEl/TrainingElFeatures"
 import TrainingHeroSection from "../../ElementsEl/TrainingEl/TrainingHeroEl"
 import LayoutEl from "../../Shared/LayoutEl"
 
@@ -7,6 +8,7 @@ const Training=()=>{
         <>
         <LayoutEl>
             <TrainingHeroSection/>
+            <TrainingElFeatures/>
         </LayoutEl>
         
         </>
