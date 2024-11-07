@@ -301,7 +301,7 @@ export const ApplicationForm = () => {
                                                 else if (grade === 'ITI') setItiCertificate(file);
                                             }}
                                             className="border rounded-lg p-2 w-full"
-                                            accept=".pdf,.jpg,.jpeg,.png"
+                                            accept=".jpg,.jpeg,.png"
                                         />
 
                                         <span className="text-red-500">
@@ -365,7 +365,7 @@ export const ApplicationForm = () => {
                                 if (file) setAdditionalCertificates(file); // Set the file if selected
                             }}
                             className="border rounded-lg p-2 w-full"
-                            accept=".pdf,.jpg,.jpeg,.png"
+                            accept=".jpg,.jpeg,.png"
                         />
 
                         <span className="text-red-500">
