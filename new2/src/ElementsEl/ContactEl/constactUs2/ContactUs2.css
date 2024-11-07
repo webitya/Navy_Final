@@ -1,0 +1,23 @@
+.contact-us-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #0A1F44; /* Navy background for the container */
+  }
+  
+  .btn-submit {
+    background-color: #1B3A70; /* Navy */
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #142F5F; /* Darker Navy */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Stack on small screens */
+    }
+  }
+  

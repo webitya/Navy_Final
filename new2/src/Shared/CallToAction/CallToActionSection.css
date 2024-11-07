@@ -33,7 +33,7 @@
   max-width: 800px;
   padding: 40px;
   background-color: rgba(0, 18, 50, 0.85); /* Darker navy blue for content */
-  border-radius: 10px;
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
@@ -95,7 +95,6 @@
   padding: 2rem;
   text-align: center;
   color: white;
-  border-radius: 8px;
 }
 
 .cta-title {
