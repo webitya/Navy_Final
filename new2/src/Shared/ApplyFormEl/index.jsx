@@ -85,9 +85,41 @@ export const ApplicationForm = () => {
     return (
         <>
             <NavbarEl2 />
-            <div className="container mx-auto py-5">
+            <div className="mx-auto">
                 <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-auto p-6 bg-white rounded-lg shadow-md">
-                    <h2 className="text-2xl font-bold text-center mb-4">INDIAN MARKSLINE</h2>
+                    {/* <h2 className="text-2xl font-bold text-center mb-4">INDIAN MARKSLINE</h2> */}
+                    <div className="bg-blue-50 border border-blue-300 rounded-lg p-6 w-full mx-auto my-10 shadow-md">
+      <h1 className="text-3xl font-bold text-blue-800 mb-4 text-center">
+        INDIAN MARKSLINE APPLICATION FORM
+      </h1>
+      <h2 className="text-2xl font-semibold text-blue-700 mb-4 text-center">
+        Form Filling Instructions
+      </h2>
+      <p className="text-lg text-gray-800 mb-4 text-center">
+        <strong>COMMERCE & ARTS STUDENTS</strong> CAN JOIN MERCHANT NAVY & BECOME AN <span className="text-blue-600 font-bold">#OFFICER</span>
+      </p>
+
+      <div className="space-y-2 text-gray-700">
+        <p><strong>Requirements:</strong></p>
+        <ul className="list-disc pl-6">
+          <li>10th Pass with <strong>&gt;= 40%</strong> marks</li>
+          <li>Age Limit: 18 - 25 years</li>
+          <li>Eye Sight: 6/6</li>
+          <li>Medically Fit</li>
+          <li>Valid Aadhar Card</li>
+        </ul>
+
+        <p className="mt-4"><strong>Program Details:</strong></p>
+        <ul className="list-disc pl-6">
+          <li>6 Months G.P. Rating Course</li>
+          <li>Eligible for Engine/Deck Crew</li>
+        </ul>
+
+        <p className="mt-4 font-semibold text-red-600">
+          Important: Upload image in JPG, PNG, or JPEG format only.
+        </p>
+      </div>
+    </div>
 
                     {/* Credentials Section */}
                     <div className="mb-5">
