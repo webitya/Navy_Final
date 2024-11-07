@@ -44,7 +44,7 @@ const HeroSection = () => {
         onCancel={closeModal}
         footer={[
           <Button key="cancel" onClick={closeModal} className="modal-cancel">Cancel</Button>,
-          <Button key="confirm" onClick={handleConfirm} className="modal-confirm">Confirm</Button>
+          <Button key="confirm" onClick={handleConfirm} className="modal-confirm">Apply Now</Button>
         ]}
         className="merchant-navy-modal"
       >
@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
           <div className="rule flex items-center">
             <IdcardOutlined className="text-yellow-400 text-xl mr-3" />
-            <span className="rule-text text-gray-200">Valid Passport</span>
+            <span className="rule-text text-gray-200">Valid Aadhar Card</span>
           </div>
         </div>
 

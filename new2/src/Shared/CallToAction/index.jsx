@@ -43,7 +43,7 @@ const CallToActionSection = () => {
         onCancel={closeModal}
         footer={[
           <Button key="cancel" onClick={closeModal}>Cancel</Button>,
-          <Button key="confirm" onClick={handleConfirm} type="primary">Confirm</Button>
+          <Button key="confirm" onClick={handleConfirm} type="primary">Apply Now</Button>
         ]}
       >
         <h2 className="ant-modal-title">Commerce & Arts Students Can Join Merchant Navy</h2>
@@ -54,7 +54,7 @@ const CallToActionSection = () => {
           <div><FieldTimeOutlined /> Age Limit: 18-25</div>
           <div><EyeOutlined /> Eye Sight: 6/6</div>
           <div><SafetyCertificateOutlined /> Medically Fit</div>
-          <div><IdcardOutlined /> Valid Passport</div>
+          <div><IdcardOutlined /> Valid Aadhar Card</div>
         </div>
 
         <p><CheckCircleOutlined /> Indian Marksline offers a <strong>6 Months G.P. Rating Course</strong> for students who wish to join the engine or deck crew.</p>

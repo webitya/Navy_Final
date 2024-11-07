@@ -80,7 +80,7 @@ const TrainingProgramsSection = () => {
         onCancel={closeModal}
         footer={[
           <Button key="cancel" onClick={closeModal} className="modal-cancel">Cancel</Button>,
-          <Button key="confirm" onClick={handleConfirm} className="modal-confirm">Confirm</Button>
+          <Button key="confirm" onClick={handleConfirm} className="modal-confirm">Apply Now</Button>
         ]}
         className="merchant-navy-modal"
       >
@@ -108,7 +108,7 @@ const TrainingProgramsSection = () => {
           </div>
           <div className="rule">
             <IdcardOutlined className="rule-icon" />
-            <span className="rule-text">Valid Passport</span>
+            <span className="rule-text">Valid Aadhar Card</span>
           </div>
         </div>
 
