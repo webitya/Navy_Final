@@ -37,7 +37,7 @@ function App() {
           <Route path="/vacancy" element={<Vacancy />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/gp-rating" element={<GPRating />} />
-          <Route path="/ccmc" element={<CCMC />} />
+          <Route path="/ccmc" element={<CCMC/>} />
           <Route path="/gallery" element={<Gallery />} />
 
           <Route path="/about-us" element={<AboutUs/>} />
