@@ -49,7 +49,7 @@ function App() {
           <Route path="/galler" element={<Gallery/>} />
 
           <Route
-            path="/admin"
+            path="/admi"
             element={
               <ProtectedRoute>
                 <AdminPanel />
