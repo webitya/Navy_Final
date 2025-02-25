@@ -26,7 +26,7 @@ function App() {
         <Toaster />
 
         <Routes>
-          <Route path="/" element={<Homepag />} />
+          <Route path="/" element={<h1 style={{text-align="center"}}>Server Not Available</h1>} />
           <Route path="/login" element={<Login />} />
           <Route path="/form" element={<ApplicationForm />} />
           <Route path="/success" element={<SubmissionSuccess />} />
