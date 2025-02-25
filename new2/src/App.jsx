@@ -26,7 +26,7 @@ function App() {
         <Toaster />
 
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Homepag />} />
           <Route path="/login" element={<Login />} />
           <Route path="/form" element={<ApplicationForm />} />
           <Route path="/success" element={<SubmissionSuccess />} />
