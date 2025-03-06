@@ -26,8 +26,8 @@ function App() {
         <Toaster />
 
         <Routes>
-          <Route path="/" element={<Homepage/>} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/ok" element={<Homepage/>} />
+          <Route path="/logi" element={<Login />} />
           <Route path="/form" element={<ApplicationForm />} />
           <Route path="/success" element={<SubmissionSuccess />} />
           {/* <Route path="/contact" element={<ContactPage />} /> */}
@@ -49,7 +49,7 @@ function App() {
           <Route path="/gallery" element={<Gallery/>} /> */}
 
           <Route
-            path="/admin"
+            path="/admi"
             element={
               <ProtectedRoute>
                 <AdminPanel />
