@@ -1,5 +1,5 @@
-import { BrowserRouter as Route, Route, Rout } from 'react-router-do';
-import './App.cs';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-do';
+import './App.css';
 import { Login } from './pages/login/Login';
 
 import { Toaster } from 'react-hot-toast';
@@ -28,16 +28,16 @@ function App() {
         <Routes>
           <Route path="/ok" element={<Homepage/>} />
           <Route path="/logi" element={<Login />} />
-          <Route path="/form" element={<ApplicationForm />} />
-          <Route path="/success" element={<SubmissionSuccess />} />
-          {/* <Route path="/contact" element={<ContactPage />} /> */}
+          <Route path="/for" element={<ApplicationForm />} />
+          <Route path="/succes" element={<SubmissionSuccess />} />
+          {/* <Route path="/contac" element={<ContactPage />} /> */}
 
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/training" element={<Training />} />
-          <Route path="/vacancy" element={<Vacancy />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/gp-rating" element={<GPRating />} />
-          <Route path="/ccmc" element={<CCMC/>} />
+          <Route path="/about-u" element={<AboutUs />} />
+          <Route path="/trainin" element={<Training />} />
+          <Route path="/vacanc" element={<Vacancy />} />
+          <Route path="/contact-u" element={<Contact />} />
+          <Route path="/gp-ratin" element={<GPRating />} />
+          <Route path="/ccm" element={<CCMC/>} />
           <Route path="/gallery" element={<Gallery />} />
 
 {/*           <Route path="/about-us" element={<AboutUs/>} />
